@@ -1,61 +1,356 @@
-Node:China Camp,4240;
-Node:Church Creek Divide,3650;
-Node:Pine Valley,3140;
-Node:Junction 1,3940;
-Node:Divide Camp,3680;
-Node:Junction 2,4240;
-Node:Bear Basin,3420;
-Node:Junction 3,4520;
-Node:Pine Ridge,4190;
-Node:Junction 10,4270;
-Node:Junction 4,4440;
-Node:Mosquito Springs,4090;
-Node:Junction 9,4000;
-Node:Venturi,4050;
-Node:Junction 9,3720;
-Node:Black Cone Camp,3580;
-Node:Strawberry,2880;
-Node:Junction 5,2800;
-Node:Willow Springs,1980;
-Node:Junction 11,1780;
-Node:Tassajara Creek,1150;
-Node:Adobe,1040;
-Node:Arroyo Seco,960;
-Node:Tassajara Hot Springs,1600;
-Node:Junction 6,2240;
-Node:Wildcat,2880;
-Node:Junction 7,2720;
-Node:Junction 8,4500;
-Edge:Pine Ridge Trail,1,Church Creek Divide,China Camp,3.7,1590,1000;
-Edge:Carmel River Trail,1,Pine Valley,Church Creek Divide,2,510,0;
-Edge:Pine Ridge Trail,2,Divide Camp,Church Creek Divide,0.5,50,80;
-Edge:Bear Basin Trail,1,Pine Valley,Junction 1,1.2,800,0;
-Edge:Bear Basin Trail,2,Bear Basin,Junction 1,0.7,520,0;
-Edge:Bear Basin Connector,1,Junction 1,Junction 2,0.7,300,0;
-Edge:Bear Basin Trail,3,Junction 3,Bear Basin,1.2,0,1100;
-Edge:Pine Ridge Trail,5,Junction 10,Junction 3,0.5,250,0;
-Edge:Pine Ridge Camp Trail,1,Junction 10,Pine Ridge,0.1,0,80;
-Edge:Pine Ridge Trail,4,Junction 3,Junction 2,2,0,280;
-Edge:Pine Ridge Trail,3,Junction 2,Divide Camp,1.8,0,560;
-Edge:Black Cone Trail,1,Junction 3,Junction 4,1.1,40,120;
-Edge:Mosquito Springs Trail,1,Junction 4,Mosquito Springs,0.5,0,350;
-Edge:Black Cone Trail,2,Junction 4,Venturi,3.4,250,640;
-Edge:Black Cone Trail,3,Venturi,Junction 9,3.2,60,390;
-Edge:Black Cone Camp Trail,1,Junction 9,Black Cone Camp,0.1,0,140;
-Edge:Black Cone Trail,4,Junction 9,Strawberry,2.7,210,1050;
-Edge:South Fork Trail,1,Strawberry,Junction 5,0.4,0,80;
-Edge:Marble Peak Trail,4,Junction 5,Willow Springs,3.3,160,980;
-Edge:Marble Peak Trail,5,Willow Springs,Junction 11,0.4,0,200;
-Edge:Marble Peak Trail,6,Junction 11,Tassajara Creek,2.1,0,630;
-Edge:Marble Peak Trail,7,Tassajara Creek,Adobe,0.8,0,110;
-Edge:Marble Peak Trail,8,Adobe,Arroyo Seco,3.9,240,320;
-Edge:Tony’s Trail,1,Tassajara Hot Springs,Willow Springs,3,1320,1040;
-Edge:Horse Pasture Trail,2,Junction 6,Adobe,2.8,0,1200;
-Edge:Tassajara Cutoff Trail,1,Junction 6,Tassajara Hot Springs,1.6,0,640;
-Edge:Tassajara Road,3,Wildcat,Tassajara Hot Springs,2.2,0,1280;
-Edge:Horse Pasture Trail,1,Wildcat,Junction 6,2.6,0,640;
-Edge:Tassajara Road,2,Junction 8,Wildcat,3.1,110,1730;
-Edge:Church Creek Trail,2,Junction 7,Wildcat,2.5,860,700;
-Edge:Church Creek Trail,1,Church Creek Divide,Junction 7,2.9,0,930;
-Edge:Church Ranch Road,1,Junction 8,Junction 7,2.8,0,1780;
-Edge:Tassajara Road,1,China Camp,Junction 8,0.9,260,0;
+Node:Adobe,1040,Camp
+Node:Apple Tree,2910,Camp
+Node:Arroyo Seco,1040,Parking
+Node:Avila Ranch Private Property,1990,POI
+Node:Barlow Flat,880,Camp
+Node:Bear Basin,3420,Camp
+Node:Big Pines,3280,Camp
+Node:Big Sur Station Trailhead,320,Parking
+Node:Black Cone Camp,3580,Camp
+Node:Bluff,1170,Camp
+Node:Boronda Trailhead,560,Parking
+Node:Bottchers Gap,2090,Parking
+Node:Buckskin Flat,1580,Camp
+Node:Carmel River Camp,1240,Camp
+Node:Carrizo Spring,3410,Camp
+Node:Carrizo Trailhead,1560,Parking
+Node:China Camp,4240,Parking
+Node:Church Creek Divide,3650,Picnic
+Node:Cienega,1760,Camp
+Node:Clover Basin,1870,Camp
+Node:Cold Spring,3260,Camp
+Node:Comings,3220,Camp
+Node:Cone Peak Camp,4120,Picnic
+Node:Cone Peak Parking,3760,Parking
+Node:Cone Peak Summit,5160,POI
+Node:Cook Spring,4450,Camp
+Node:Danish Creek,1440,Camp
+Node:DeAngulo Trailhead,590,Parking
+Node:Devils Peak,4140,Picnic
+Node:Divide Camp,3680,Camp
+Node:Double Cone Lookout,4850,Picnic
+Node:Escondido,2140,Camp
+Node:Escondido Trailhead,2170,Parking
+Node:Espinosa,1710,Picnic
+Node:Fish Camp,2040,Camp
+Node:Forks,2490,Camp
+Node:Fresno,2280,Camp
+Node:Goat Camp,2490,Camp
+Node:Hanging Valley,2730,Camp
+Node:Hiding Canyon,1750,Camp
+Node:Hwy 1 / Coast Ridge Road,940,POI
+Node:Indian Valley,2810,Camp
+Node:Indians Station,2060,Parking
+Node:Junipero Serra Peak,5880,POI
+Node:Kirk Creek,180,Parking
+Node:Last Chance,1790,Camp
+Node:Little Pines,3970,Picnic
+Node:Lone Pine,3900,Camp
+Node:Los Padres Dam,980,Parking
+Node:Lost Valley,1800,Camp
+Node:Lower Pat Spring,3670,Camp
+Node:Madrone,3000,Camp
+Node:Miller Canyon,2020,Camp
+Node:Mocho,1570,Camp
+Node:Mosquito Springs,4090,Camp
+Node:Ojito,2920,Camp
+Node:Outlaw,1640,Camp
+Node:Pat Spring,3750,Picnic
+Node:Pelon,2000,Camp
+Node:Pine Ridge,4190,Camp
+Node:Pine Valley,3140,Camp
+Node:Puerto Suello,3530,Picnic
+Node:Rainbow,1560,Camp
+Node:Redwood,1780,Camp
+Node:Rocky Creek,1430,Camp
+Node:Round Rock,1900,Camp
+Node:San Antonio,1880,Camp
+Node:South Fork,1820,Camp
+Node:Strawberry,2880,Camp
+Node:Sulphur Springs,1350,Camp
+Node:Sykes,1080,Camp
+Node:Sykes Hot Springs,1060,Picnic
+Node:Tan Oak,2680,Camp
+Node:Tassajara Creek,1150,Camp
+Node:Tassajara Hot Springs,1600,Camp
+Node:Terrace Creek,1310,Camp
+Node:Timber Top,3080,Camp
+Node:Trail Spring,3780,Camp
+Node:Turner Creek,2580,Camp
+Node:Upper Bee,3120,Camp
+Node:Upper Higgins,2320,Camp
+Node:Upper Pat Spring,3880,Camp
+Node:Ventana,650,Camp
+Node:Venturi,4050,Picnic
+Node:Vicente Flat,1620,Camp
+Node:Vicente Flat Parking,3190,Parking
+Node:Wildcat,2720,Camp
+Node:Willow Springs,1980,Camp
+Node:Junction 1,3940,Junction
+Node:Junction 2,4240,Junction
+Node:Junction 3,4520,Junction
+Node:Junction 4,4440,Junction
+Node:Junction 5,2800,Junction
+Node:Junction 6,2240,Junction
+Node:Junction 7,2720,Junction
+Node:Junction 8,4500,Junction
+Node:Junction 9,3720,Junction
+Node:Junction 10,4270,Junction
+Node:Junction 11,1780,Junction
+Node:Junction 12,1940,Junction
+Node:Junction 13,1240,Junction
+Node:Junction 14,2400,Junction
+Node:Junction 15,3340,Junction
+Node:Junction 16,1200,Junction
+Node:Junction 17,4020,Junction
+Node:Junction 18,3380,Junction
+Node:Junction 19,3570,Junction
+Node:Junction 20,3620,Junction
+Node:Junction 21,2070,Junction
+Node:Junction 22,3500,Junction
+Node:Junction 23,3170,Junction
+Node:Junction 24,3350,Junction
+Node:Junction 25,2820,Junction
+Node:Junction 26,2970,Junction
+Node:Junction 27,3760,Junction
+Node:Junction 28,2700,Junction
+Node:Junction 30,2280,Junction
+Node:Junction 31,3550,Junction
+Node:Junction 32,3380,Junction
+Node:Junction 33,3470,Junction
+Node:Junction 34,3400,Junction
+Node:Junction 35,4490,Junction
+Node:Junction 36,2490,Junction
+Node:Junction 37,4430,Junction
+Node:Junction 38,4750,Junction
+Node:Junction 39,4590,Junction
+Node:Junction 40,4650,Junction
+Node:Junction 41,4630,Junction
+Node:Junction 42,4630,Junction
+Node:Junction 44,3290,Junction
+Node:Junction 45,2960,Junction
+Node:Junction 46,2770,Junction
+Node:Junction 47,2240,Junction
+Node:Junction 48,2180,Junction
+Node:Junction 49,2340,Junction
+Node:Junction 50,1000,Junction
+Node:Junction 51,1520,Junction
+Node:Junction 52,610,Junction
+Node:Junction 53,3260,Junction
+Node:Junction 54,3430,Junction
+Node:Junction 55,3760,Junction
+Node:Junction 56,3960,Junction
+Node:Junction 57,3240,Junction
+Node:Junction 58,2970,Junction
+Node:Junction 59,2920,Junction
+Node:Junction 60,2580,Junction
+Node:Junction 61,4850,Junction
+Node:Junction 62,3510,Junction
+Node:Junction 63,2530,Junction
+Node:Junction 64,1170,Junction
+Node:Junction 65,960,Junction
+Node:Junction 66,900,Junction
+Node:Junction 67,890,Junction
+Node:Junction 68,790,Junction
+Node:Junction 69,1040,Junction
+Node:Junction 70,1010,Junction
+Node:Junction 71,1020,Junction
+Node:Junction 72,1680,Junction
+Node:Junction 73,4170,Junction
+Node:Junction 74,2100,Junction
+Node:Junction 75,2450,Junction
+Node:Junction 76,2740,Junction
+Node:Junction 77,1770,Junction
+Node:Junction 78,1580,Junction
+Edge:Arroyo Seco Campground Road,1,Junction 65,Junction 66,0.6,80,140
+Edge:Arroyo Seco Campground Road,2,Junction 66,Junction 67,0.3,20,30
+Edge:Arroyo Seco Road,1,Junction 64,Junction 70,0.8,60,220
+Edge:Arroyo Seco Road,2,Junction 70,Arroyo Seco,1.9,80,50
+Edge:Arroyo Seco Road,3,Arroyo Seco,Junction 65,0.2,0,80
+Edge:Arroyo Seco Road,4,Junction 65,Junction 67,0.3,10,80
+Edge:Arroyo Seco Road,5,Junction 67,Junction 68,0.3,0,100
+Edge:Arroyo Seco Trail,1,Indians Station,Junction 36,2.1,450,20
+Edge:Arroyo Seco Trail,2,Junction 36,Forks,0.1,0,0
+Edge:Arroyo Seco Trail,3,Forks,Madrone,1.3,510,0
+Edge:Arroyo Seco Trail,4,Madrone,Junction 37,2.3,1430,0
+Edge:Barlow Flat Camp Trail,1,Junction 50,Barlow Flat,0.2,0,120
+Edge:Bear Basin Trail,1,Pine Valley,Junction 1,1.2,800,0
+Edge:Bear Basin Trail,2,Junction 1,Bear Basin,0.7,100,620
+Edge:Bear Basin Trail,3,Bear Basin,Junction 3,1.2,1100,0
+Edge:Bear Basin Connector,1,Junction 1,Junction 2,0.7,300,0
+Edge:Bee Camp Trail,1,Junction 34,Upper Bee,0.4,0,280
+Edge:Big Pines Camp Trail,1,Junction 24,Big Pines,0.1,0,70
+Edge:Big Pines Connector,1,Junction 18,Junction 19,0.7,260,70
+Edge:Big Pines Trail,1,Junction 23,Devils Peak,1.3,970,0
+Edge:Big Pines Trail,2,Devils Peak,Junction 22,1.5,70,710
+Edge:Big Pines Trail,3,Junction 22,Junction 20,1.7,610,490
+Edge:Big Pines Trail,4,Junction 20,Junction 18,1,30,270
+Edge:Big Pines Trail,5,Junction 18,Junction 24,0.1,0,30
+Edge:Big Pines Trail,6,Junction 24,Junction 21,6.4,610,1890
+Edge:Big Pines Trail,7,Junction 21,Junction 16,1.5,0,870
+Edge:Big Sur Trail,1,Junction 49,Cienega,1.2,200,780
+Edge:Big Sur Trail,2,Cienega,Rainbow,3.6,1130,1330
+Edge:Big Sur Trail,3,Rainbow,Mocho,0.8,200,190
+Edge:Big Sur Trail,4,Mocho,Junction 53,4.5,2240,550
+Edge:Black Cone Camp Trail,1,Junction 9,Black Cone Camp,0.1,0,140
+Edge:Black Cone Trail,1,Junction 3,Junction 4,1.1,40,120
+Edge:Black Cone Trail,2,Junction 4,Venturi,3.4,250,640
+Edge:Black Cone Trail,3,Venturi,Junction 9,3.2,60,390
+Edge:Black Cone Trail,4,Junction 9,Strawberry,2.7,210,1050
+Edge:Boronda Trail,1,Junction 59,Timber Top,0.5,160,0
+Edge:Boronda Trail,2,Timber Top,Boronda Trailhead,3.2,0,2520
+Edge:Camp Cawatre Road,1,Junction 70,Junction 71,0.6,50,40
+Edge:Camp Cawatre Trail,1,Junction 66,Junction 69,2.4,750,610
+Edge:Carmel River Trail,1,Los Padres Dam,Junction 16,1.4,580,360
+Edge:Carmel River Trail,2,Junction 16,Bluff,2.8,500,530
+Edge:Carmel River Trail,3,Bluff,Junction 13,1,280,210
+Edge:Carmel River Trail,4,Junction 13,Carmel River Camp,0.1,0,0
+Edge:Carmel River Trail,5,Carmel River Camp,Sulphur Springs,1.3,260,150
+Edge:Carmel River Trail,6,Sulphur Springs,Buckskin Flat,1.9,470,240
+Edge:Carmel River Trail,7,Buckskin Flat,Hiding Canyon,2.1,440,270
+Edge:Carmel River Trail,8,Hiding Canyon,Junction 12,0.7,360,170
+Edge:Carmel River Trail,10,Pine Valley,Church Creek Divide,2,510,0
+Edge:Carmel River Trail,9,Junction 12,Pine Valley,4.5,1700,500
+Edge:Carrizo Trail,1,Carrizo Trailhead,Carrizo Spring,3.3,1900,50
+Edge:Carrizo Trail,2,Carrizo Spring,Junction 40,2.7,1400,160
+Edge:Carrizo Trail,3,Junction 40,Junction 41,1,140,160
+Edge:Church Creek Trail,1,Church Creek Divide,Junction 7,2.9,0,930
+Edge:Church Creek Trail,2,Junction 7,Wildcat,2.4,700,700
+Edge:Church Creek Trail,3,Wildcat,Junction 46,0.1,60,10
+Edge:Church Ranch Road,1,Junction 8,Junction 7,2.8,0,1780
+Edge:Coast Ridge Road,1,Junction 32,Junction 33,1.2,530,440
+Edge:Coast Ridge Road,2,Junction 33,Junction 27,2.6,500,210
+Edge:Coast Ridge Road,3,Junction 27,Junction 55,0.5,100,100
+Edge:Coast Ridge Road,4,Junction 55,Junction 56,1.2,270,70
+Edge:Coast Ridge Road,5,Junction 56,Junction 54,4.4,350,880
+Edge:Coast Ridge Road,6,Junction 54,Junction 57,0.8,0,190
+Edge:Coast Ridge Road,7,Junction 57,Junction 58,1.7,0,270
+Edge:Coast Ridge Road,8,Junction 58,Junction 59,1.1,30,80
+Edge:Coast Ridge Road,9,Junction 59,Junction 60,2.4,0,340
+Edge:Coast Ridge Road,10,Junction 60,Hwy 1 / Coast Ridge Road,4.8,0,1640
+Edge:Coast Ridge Trail,1,Junction 31,Junction 35,3,940,0
+Edge:Coast Ridge Trail,2,Junction 35,Junction 37,3.6,410,470
+Edge:Coast Ridge Trail,3,Junction 37,Junction 38,1.4,470,150
+Edge:Coast Ridge Trail,4,Junction 38,Junction 41,1,170,290
+Edge:Coast Ridge Trail,5,Junction 41,Junction 42,0.2,80,80
+Edge:Coast Ridge Trail,6,Junction 42,Cone Peak Camp,1.8,100,610
+Edge:Cold Spring Road,1,Junction 53,Cold Spring,0.1,0,0
+Edge:Cold Spring Road,2,Cold Spring,Junction 54,0.6,170,0
+Edge:Comings Trail,1,Junction 22,Comings,0.5,0,280
+Edge:Cone Peak Road,1,Cone Peak Camp,Cone Peak Parking,1.6,20,380
+Edge:Cone Peak Road,2,Cone Peak Parking,Junction 44,1.8,90,560
+Edge:Cone Peak Road,3,Junction 44,Vicente Flat Parking,0.3,50,150
+Edge:Cone Peak Summit Trail,1,Junction 61,Cone Peak Summit,0.6,310,0
+Edge:Cone Peak Trail,1,Cone Peak Parking,Junction 61,2.3,1090,0
+Edge:Cone Peak Trail,2,Junction 61,Trail Spring,1.4,0,1070
+Edge:Cook Spring Camp Trail,1,Junction 39,Cook Spring,0.3,0,140
+Edge:Cook Spring Cutoff,1,Junction 38,Junction 39,0.3,0,160
+Edge:Cook Spring Cutoff,2,Junction 39,Junction 40,0.3,130,70
+Edge:DeAngulo Trail,1,Junction 57,DeAngulo Trailhead,3.9,0,2650
+Edge:Gamboa Trail,1,Junction 42,Trail Spring,1.5,0,850
+Edge:Gamboa Trail,2,Trail Spring,Junction 62,2.0,420,690
+Edge:Goat Camp Trail,1,Junction 63,Goat Camp,0.1,0,40
+Edge:Hanging Valley Camp Trail,1,Junction 76,Hanging Valley,0.1,0,10
+Edge:Horse Pasture Trail,1,Junction 46,Junction 48,1.1,0,590
+Edge:Horse Pasture Trail,2,Junction 47,Junction 6,1.5,500,500
+Edge:Horse Pasture Trail,3,Junction 6,Adobe,2.8,0,1200
+Edge:Horse Pasture Trail Cutoff,1,Junction 46,Junction 45,0.2,290,100
+Edge:Indian Valley Trail,1,Junction 28,Indian Valley,0.2,110,0
+Edge:Indian Valley Trail,2,Indian Valley,Junction 26,0.8,160,0
+Edge:Indians Road,1,Junction 64,Junction 75,4.0,1280,0
+Edge:Indians Road,2,Junction 75,Junction 76,3.8,430,140
+Edge:Indians Road,3,Junction 76,Escondido Trailhead,4.8,280,850
+Edge:Indians Road,4,Escondido Trailhead,Indians Station,2.8,200,310
+Edge:Indians Road,5,Indians Station,Junction 74,0.4,50,10
+Edge:Indians Road,6,Junction 74,Junction 77,3.5,110,440
+Edge:Indians - Santa Lucia Connector,1,Junction 75,Junction 72,1.2,40,810
+Edge:Jeffery Road,1,China Camp,Junction 15,2.5,70,970
+Edge:Junipero Serra Summit Trail,1,Junction 73,Junipero Serra Peak,2.8,1810,100
+Edge:Lone Pine Camp Trail,1,Junction 17,Lone Pine,0.1,0,120
+Edge:Lost Valley Connector,1,Junction 31,Junction 30,2,30,1300
+Edge:Lost Valley Trail,1,Escondido Trailhead,Escondido,0.1,0,30
+Edge:Lost Valley Trail,2,Escondido,Fish Camp,4.8,1270,1370
+Edge:Lost Valley Trail,3,Fish Camp,Junction 30,1.3,240,0
+Edge:Lost Valley Trail,4,Junction 30,Lost Valley,1.2,0,480
+Edge:Lost Valley Trail,5,Lost Valley,Pelon,3.5,410,210
+Edge:Lost Valley Trail,6,Pelon,Upper Higgins,1.3,320,0
+Edge:Lost Valley Trail,7,Upper Higgins,Junction 28,0.9,380,0
+Edge:Lost Valley Trail,8,Junction 28,Junction 25,0.9,120,0
+Edge:Marble Peak Trail,1,Junction 27,Junction 26,1.6,70,860
+Edge:Marble Peak Trail,2,Junction 26,Junction 25,0.4,0,150
+Edge:Marble Peak Trail,3,Junction 25,Tan Oak,3,720,860
+Edge:Marble Peak Trail,4,Tan Oak,Junction 5,0.5,120,0
+Edge:Marble Peak Trail,5,Junction 5,Willow Springs,3.3,160,980
+Edge:Marble Peak Trail,6,Willow Springs,Junction 11,0.4,0,200
+Edge:Marble Peak Trail,7,Junction 11,Tassajara Creek,2.1,0,630
+Edge:Marble Peak Trail,8,Tassajara Creek,Adobe,0.8,0,110
+Edge:Marble Peak Trail,9,Adobe,Junction 64,1.2,260,130
+Edge:Miller Canyon Trail,1,Junction 13,Clover Basin,2.9,760,130
+Edge:Miller Canyon Trail,2,Clover Basin,Miller Canyon,0.8,170,20
+Edge:Miller Canyon Trail,3,Miller Canyon,Junction 14,0.9,400,20
+Edge:Miller Canyon Trail,4,Junction 14,Junction 15,4.7,1370,430
+Edge:Mosquito Springs Trail,1,Junction 4,Mosquito Springs,0.5,0,350
+Edge:North Coast Ridge Trail,1,Junction 32,Junction 34,0.7,100,80
+Edge:North Coast Ridge Trail,2,Junction 34,Junction 31,2.7,630,480
+Edge:Ojito Camp Trail,1,Junction 62,Ojito,0.8,40,630
+Edge:Pat Spring Trail,1,Pat Spring,Upper Pat Spring,0.2,170,40
+Edge:Pine Ridge Camp Trail,1,Junction 10,Pine Ridge,0.1,0,80
+Edge:Pine Ridge Trail,1,China Camp,Church Creek Divide,3.7,1000,1590
+Edge:Pine Ridge Trail,2,Church Creek Divide,Divide Camp,0.5,80,50
+Edge:Pine Ridge Trail,3,Divide Camp,Junction 2,1.8,560,0
+Edge:Pine Ridge Trail,4,Junction 2,Junction 3,2,280,0
+Edge:Pine Ridge Trail,5,Junction 3,Junction 10,0.5,0,250
+Edge:Pine Ridge Trail,6,Junction 10,Junction 49,3.1,50,1980
+Edge:Pine Ridge Trail,7,Junction 49,Redwood,1.1,0,560
+Edge:Pine Ridge Trail,8,Redwood,Sykes,2.8,250,950
+Edge:Pine Ridge Trail,9,Sykes,Junction 50,3.3,710,790
+Edge:Pine Ridge Trail,10,Junction 50,Terrace Creek,1.6,560,250
+Edge:Pine Ridge Trail,11,Terrace Creek,Junction 51,1.6,320,110
+Edge:Pine Ridge Trail,12,Junction 51,Junction 52,3.3,160,1070
+Edge:Pine Ridge Trail,13,Junction 52,Big Sur Station Trailhead,1.5,240,530
+Edge:Puerto Suello Trail,1,Hiding Canyon,Puerto Suello,3,1870,90
+Edge:Rattlesnake Creek Trail,1,Junction 21,Danish Creek,1,0,630
+Edge:Road 6,1,Junction 77,Junction 78,0.8,0,190
+Edge:Rocky Creek Trail,1,Junction 68,Rocky Creek,2.8,730,90
+Edge:Rodeo Flats Trail,1,Junction 36,Junction 35,3.1,2000,0
+Edge:Round Rock Trail,1,Junction 12,Round Rock,0.8,190,230
+Edge:Salsipuedes Ranch Road,1,Junction 78,Carrizo Trailhead,0.4,20,40
+Edge:San Antonio Trail,1,Junction 44,Fresno,1.9,0,1010
+Edge:San Antonio Trail,2,Fresno,San Antonio,2.7,170,570
+Edge:San Antonio Trail,3,San Antonio,Avila Ranch Private Property,0.6,380,270
+Edge:Santa Lucia Trail,1,Arroyo Seco,Junction 71,2.3,400,420
+Edge:Santa Lucia Trail,2,Junction 71,Junction 69,0.2,30,10
+Edge:Santa Lucia Trail,3,Junction 69,Junction 72,3.5,1030,390
+Edge:Santa Lucia Trail,4,Junction 72,Last Chance,0.8,250,140
+Edge:Santa Lucia Trail,5,Last Chance,Junction 73,6.4,2760,380
+Edge:Santa Lucia Trail,6,Junction 73,Junction 74,4.0,100,2170
+Edge:Skinner Ridge Trail,1,Bottchers Gap,Junction 23,3.4,1380,300
+Edge:South Fork Trail,1,Junction 5,Strawberry,0.4,80,0
+Edge:South Fork Trail,2,Strawberry,South Fork,3.0,100,1160
+Edge:South Fork Trail,3,South Fork,Rainbow,2.3,210,470
+Edge:Stone Ridge Trail,1,Junction 62,Junction 63,1.3,0,980
+Edge:Stone Ridge Trail,2,Junction 63,Vicente Flat,6.3,890,1800
+Edge:Sykes Hot Springs Trail,1,Sykes,Sykes Hot Springs,0.7,50,70
+Edge:Tassajara Cutoff Trail,1,Junction 6,Tassajara Hot Springs,1.6,0,640
+Edge:Tassajara Road,1,China Camp,Junction 8,0.9,260,0
+Edge:Tassajara Road,2,Junction 8,Junction 45,3.1,110,1650
+Edge:Tassajara Road,3,Junction 45,Junction 47,1.1,0,720
+Edge:Tassajara Road,4,Junction 47,Junction 48,0.1,0,60
+Edge:Tassajara Road,5,Junction 48,Tassajara Hot Springs,1.0,0,580
+Edge:Terrace Creek Trail,1,Terrace Creek,Outlaw,0.6,330,0
+Edge:Terrace Creek Trail,2,Outlaw,Junction 60,1.3,940,0
+Edge:Timber Top Camp Trail,1,Junction 58,Timber Top,0.2,110,0
+Edge:Tony’s Trail,1,Tassajara Hot Springs,Junction 11,3,1320,1040
+Edge:Turner Creek Trail,1,Junction 23,Apple Tree,0.5,0,260
+Edge:Turner Creek Trail,2,Apple Tree,Turner Creek,1.3,0,330
+Edge:Ventana Camp Trail,1,Junction 51,Ventana,1.2,30,900
+Edge:Ventana Trail,1,Junction 20,Junction 19,1,60,250
+Edge:Ventana Trail,2,Junction 19,Lower Pat Spring,0.2,100,0
+Edge:Ventana Trail,3,Lower Pat Spring,Pat Spring,0.1,80,0
+Edge:Ventana Trail,4,Pat Spring,Little Pines,2.4,670,450
+Edge:Ventana Trail,5,Little Pines,Puerto Suello,2.1,140,580
+Edge:Ventana Trail,6,Puerto Suello,Junction 17,1.7,840,350
+Edge:Ventana Trail,7,Junction 17,Double Cone Lookout,2.4,1040,210
+Edge:Vicente Flat Trail,1,Vicente Flat Parking,Vicente Flat,2.6,50,1620
+Edge:Vicente Flat Trail,2,Vicente Flat,Espinosa,2.2,440,350
+Edge:Vicente Flat Trail,3,Espinosa,Kirk Creek,4,50,1580

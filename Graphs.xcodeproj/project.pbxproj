@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B507A60D1A529706003BD723 /* POI.png in Resources */ = {isa = PBXBuildFile; fileRef = B507A6091A529706003BD723 /* POI.png */; };
+		B507A60E1A529706003BD723 /* Picnic.png in Resources */ = {isa = PBXBuildFile; fileRef = B507A60A1A529706003BD723 /* Picnic.png */; };
+		B507A60F1A529706003BD723 /* Camp.png in Resources */ = {isa = PBXBuildFile; fileRef = B507A60B1A529706003BD723 /* Camp.png */; };
+		B507A6101A529706003BD723 /* Parking.png in Resources */ = {isa = PBXBuildFile; fileRef = B507A60C1A529706003BD723 /* Parking.png */; };
+		B507A6141A55F45E003BD723 /* ElevationGetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B507A6131A55F45E003BD723 /* ElevationGetter.swift */; };
+		B507A6161A55FA3D003BD723 /* CalloutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B507A6151A55FA3D003BD723 /* CalloutView.swift */; };
 		B51479691A26F076004A7C76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51479681A26F076004A7C76 /* AppDelegate.swift */; };
 		B514796C1A26F076004A7C76 /* Graphs.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B514796A1A26F076004A7C76 /* Graphs.xcdatamodeld */; };
 		B514796E1A26F076004A7C76 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B514796D1A26F076004A7C76 /* ViewController.swift */; };
@@ -14,6 +20,56 @@
 		B51479731A26F076004A7C76 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B51479721A26F076004A7C76 /* Images.xcassets */; };
 		B51479761A26F076004A7C76 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B51479741A26F076004A7C76 /* LaunchScreen.xib */; };
 		B51479821A26F076004A7C76 /* GraphsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51479811A26F076004A7C76 /* GraphsTests.swift */; };
+		B514798C1A291B48004A7C76 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = B514798B1A291B48004A7C76 /* Node.swift */; };
+		B514798E1A291C9C004A7C76 /* Edge.swift in Sources */ = {isa = PBXBuildFile; fileRef = B514798D1A291C9C004A7C76 /* Edge.swift */; };
+		B51479901A294560004A7C76 /* Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = B514798F1A294560004A7C76 /* Graph.swift */; };
+		B51479941A295653004A7C76 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51479931A295653004A7C76 /* Route.swift */; };
+		B51479981A2A8359004A7C76 /* Dijkstra.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51479971A2A8359004A7C76 /* Dijkstra.swift */; };
+		B53D70E81A81160700D75A4A /* rivers.txt in Resources */ = {isa = PBXBuildFile; fileRef = B53D70E71A81160700D75A4A /* rivers.txt */; };
+		B53D70EA1A81163A00D75A4A /* RiverReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53D70E91A81163A00D75A4A /* RiverReader.swift */; };
+		B550B33F1A5609DA005A9C4A /* waypointIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = B550B33E1A5609DA005A9C4A /* waypointIcon.png */; };
+		B550B3411A5609FD005A9C4A /* destinationIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = B550B3401A5609FD005A9C4A /* destinationIcon.png */; };
+		B550B3431A59E698005A9C4A /* campRed.png in Resources */ = {isa = PBXBuildFile; fileRef = B550B3421A59E698005A9C4A /* campRed.png */; };
+		B550B3451A59EBFA005A9C4A /* picnicRed.png in Resources */ = {isa = PBXBuildFile; fileRef = B550B3441A59EBFA005A9C4A /* picnicRed.png */; };
+		B550B3491A59EC66005A9C4A /* junctionRed.png in Resources */ = {isa = PBXBuildFile; fileRef = B550B3461A59EC66005A9C4A /* junctionRed.png */; };
+		B550B34A1A59EC66005A9C4A /* parkingRed.png in Resources */ = {isa = PBXBuildFile; fileRef = B550B3471A59EC66005A9C4A /* parkingRed.png */; };
+		B550B34B1A59EC66005A9C4A /* POIRed.png in Resources */ = {isa = PBXBuildFile; fileRef = B550B3481A59EC66005A9C4A /* POIRed.png */; };
+		B550B34D1A59F967005A9C4A /* confirm.png in Resources */ = {isa = PBXBuildFile; fileRef = B550B34C1A59F967005A9C4A /* confirm.png */; };
+		B550B34F1A59FB35005A9C4A /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = B550B34E1A59FB35005A9C4A /* arrow.png */; };
+		B550B3511A5A0192005A9C4A /* night.png in Resources */ = {isa = PBXBuildFile; fileRef = B550B3501A5A0192005A9C4A /* night.png */; };
+		B550B3531A5A0282005A9C4A /* walking.png in Resources */ = {isa = PBXBuildFile; fileRef = B550B3521A5A0282005A9C4A /* walking.png */; };
+		B550B3551A5A507D005A9C4A /* parkingThin.png in Resources */ = {isa = PBXBuildFile; fileRef = B550B3541A5A507D005A9C4A /* parkingThin.png */; };
+		B550B3571A5A5B8B005A9C4A /* delete.png in Resources */ = {isa = PBXBuildFile; fileRef = B550B3561A5A5B8B005A9C4A /* delete.png */; };
+		B571680C1A2F0C0600921078 /* KMLWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B571680B1A2F0C0600921078 /* KMLWriter.swift */; };
+		B571680E1A2F0E4400921078 /* output.kml in Resources */ = {isa = PBXBuildFile; fileRef = B571680D1A2F0E4400921078 /* output.kml */; };
+		B57168101A2F0FE500921078 /* KMLHeader.txt in Resources */ = {isa = PBXBuildFile; fileRef = B571680F1A2F0FE500921078 /* KMLHeader.txt */; };
+		B57168121A2F100200921078 /* NodeHeader.txt in Resources */ = {isa = PBXBuildFile; fileRef = B57168111A2F100200921078 /* NodeHeader.txt */; };
+		B57168141A2F103500921078 /* NodeFooter.txt in Resources */ = {isa = PBXBuildFile; fileRef = B57168131A2F103500921078 /* NodeFooter.txt */; };
+		B57168161A2F106700921078 /* NodeSection3.txt in Resources */ = {isa = PBXBuildFile; fileRef = B57168151A2F106700921078 /* NodeSection3.txt */; };
+		B57168181A2F10B700921078 /* EdgeHeader.txt in Resources */ = {isa = PBXBuildFile; fileRef = B57168171A2F10B700921078 /* EdgeHeader.txt */; };
+		B571681A1A2F10D500921078 /* EdgeSection2White.txt in Resources */ = {isa = PBXBuildFile; fileRef = B57168191A2F10D500921078 /* EdgeSection2White.txt */; };
+		B571681C1A2F10EC00921078 /* EdgeFooter.txt in Resources */ = {isa = PBXBuildFile; fileRef = B571681B1A2F10EC00921078 /* EdgeFooter.txt */; };
+		B571681E1A2F110C00921078 /* KMLFooter.txt in Resources */ = {isa = PBXBuildFile; fileRef = B571681D1A2F110C00921078 /* KMLFooter.txt */; };
+		B57168241A2F143700921078 /* coordinateData.txt in Resources */ = {isa = PBXBuildFile; fileRef = B57168231A2F143700921078 /* coordinateData.txt */; };
+		B57168261A3183DB00921078 /* input.txt in Resources */ = {isa = PBXBuildFile; fileRef = B57168251A3183DB00921078 /* input.txt */; };
+		B57168281A31841700921078 /* output.txt in Resources */ = {isa = PBXBuildFile; fileRef = B57168271A31841700921078 /* output.txt */; };
+		B573B4181A31A55A0093F06B /* NodeSection4.txt in Resources */ = {isa = PBXBuildFile; fileRef = B573B4171A31A55A0093F06B /* NodeSection4.txt */; };
+		B58B50EB1A51CC6600407BB1 /* Invisible.txt in Resources */ = {isa = PBXBuildFile; fileRef = B58B50EA1A51CC6600407BB1 /* Invisible.txt */; };
+		B58B50ED1A51CC7900407BB1 /* FolderSection2.txt in Resources */ = {isa = PBXBuildFile; fileRef = B58B50EC1A51CC7900407BB1 /* FolderSection2.txt */; };
+		B58B50EF1A51CC8C00407BB1 /* FolderHeader.txt in Resources */ = {isa = PBXBuildFile; fileRef = B58B50EE1A51CC8C00407BB1 /* FolderHeader.txt */; };
+		B58B50F11A51CCBD00407BB1 /* FolderFooter.txt in Resources */ = {isa = PBXBuildFile; fileRef = B58B50F01A51CCBD00407BB1 /* FolderFooter.txt */; };
+		B58B50F31A51CCE400407BB1 /* FolderOpen.txt in Resources */ = {isa = PBXBuildFile; fileRef = B58B50F21A51CCE400407BB1 /* FolderOpen.txt */; };
+		B58B50F51A51D61A00407BB1 /* graph.kml in Resources */ = {isa = PBXBuildFile; fileRef = B58B50F41A51D61A00407BB1 /* graph.kml */; };
+		B58B50F71A51D91500407BB1 /* NodeSection2.txt in Resources */ = {isa = PBXBuildFile; fileRef = B58B50F61A51D91500407BB1 /* NodeSection2.txt */; };
+		B58B50F91A51F1A400407BB1 /* EdgeSection2Blue.txt in Resources */ = {isa = PBXBuildFile; fileRef = B58B50F81A51F1A400407BB1 /* EdgeSection2Blue.txt */; };
+		B58B50FC1A522BE600407BB1 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B58B50FB1A522BE600407BB1 /* MapKit.framework */; };
+		B58B51021A526A1300407BB1 /* NodeAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58B51011A526A1300407BB1 /* NodeAnnotation.swift */; };
+		B58B510C1A52720A00407BB1 /* Junction.png in Resources */ = {isa = PBXBuildFile; fileRef = B58B510B1A52720A00407BB1 /* Junction.png */; };
+		B5BAF2FF1A2EDD5000DE1262 /* nodes,edges.txt in Resources */ = {isa = PBXBuildFile; fileRef = B5BAF2FE1A2EDD4F00DE1262 /* nodes,edges.txt */; };
+		B5BAF3011A2EDD8000DE1262 /* GraphReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BAF3001A2EDD8000DE1262 /* GraphReader.swift */; };
+		B5EE37581A3EBE26004F483C /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EE37571A3EBE26004F483C /* Coordinate.swift */; };
+		B5EE378A1A47E706004F483C /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5EE37891A47E706004F483C /* SceneKit.framework */; };
+		B5EE378D1A480E64004F483C /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5EE378B1A480DA4004F483C /* GLKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +83,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B507A6091A529706003BD723 /* POI.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = POI.png; sourceTree = "<group>"; };
+		B507A60A1A529706003BD723 /* Picnic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Picnic.png; sourceTree = "<group>"; };
+		B507A60B1A529706003BD723 /* Camp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Camp.png; sourceTree = "<group>"; };
+		B507A60C1A529706003BD723 /* Parking.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Parking.png; sourceTree = "<group>"; };
+		B507A6131A55F45E003BD723 /* ElevationGetter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElevationGetter.swift; sourceTree = "<group>"; };
+		B507A6151A55FA3D003BD723 /* CalloutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalloutView.swift; sourceTree = "<group>"; };
 		B51479631A26F076004A7C76 /* Graphs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Graphs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B51479671A26F076004A7C76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B51479681A26F076004A7C76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +100,56 @@
 		B514797B1A26F076004A7C76 /* GraphsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GraphsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B51479801A26F076004A7C76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B51479811A26F076004A7C76 /* GraphsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphsTests.swift; sourceTree = "<group>"; };
+		B514798B1A291B48004A7C76 /* Node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
+		B514798D1A291C9C004A7C76 /* Edge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Edge.swift; sourceTree = "<group>"; };
+		B514798F1A294560004A7C76 /* Graph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Graph.swift; path = ../Graph.swift; sourceTree = "<group>"; };
+		B51479931A295653004A7C76 /* Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		B51479971A2A8359004A7C76 /* Dijkstra.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dijkstra.swift; sourceTree = "<group>"; };
+		B53D70E71A81160700D75A4A /* rivers.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = rivers.txt; sourceTree = "<group>"; };
+		B53D70E91A81163A00D75A4A /* RiverReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RiverReader.swift; sourceTree = "<group>"; };
+		B550B33E1A5609DA005A9C4A /* waypointIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = waypointIcon.png; sourceTree = "<group>"; };
+		B550B3401A5609FD005A9C4A /* destinationIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = destinationIcon.png; sourceTree = "<group>"; };
+		B550B3421A59E698005A9C4A /* campRed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = campRed.png; sourceTree = "<group>"; };
+		B550B3441A59EBFA005A9C4A /* picnicRed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = picnicRed.png; sourceTree = "<group>"; };
+		B550B3461A59EC66005A9C4A /* junctionRed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = junctionRed.png; sourceTree = "<group>"; };
+		B550B3471A59EC66005A9C4A /* parkingRed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = parkingRed.png; sourceTree = "<group>"; };
+		B550B3481A59EC66005A9C4A /* POIRed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = POIRed.png; sourceTree = "<group>"; };
+		B550B34C1A59F967005A9C4A /* confirm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = confirm.png; sourceTree = "<group>"; };
+		B550B34E1A59FB35005A9C4A /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
+		B550B3501A5A0192005A9C4A /* night.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = night.png; sourceTree = "<group>"; };
+		B550B3521A5A0282005A9C4A /* walking.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = walking.png; sourceTree = "<group>"; };
+		B550B3541A5A507D005A9C4A /* parkingThin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = parkingThin.png; sourceTree = "<group>"; };
+		B550B3561A5A5B8B005A9C4A /* delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = delete.png; sourceTree = "<group>"; };
+		B571680B1A2F0C0600921078 /* KMLWriter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KMLWriter.swift; sourceTree = "<group>"; };
+		B571680D1A2F0E4400921078 /* output.kml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = output.kml; sourceTree = "<group>"; };
+		B571680F1A2F0FE500921078 /* KMLHeader.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = KMLHeader.txt; sourceTree = "<group>"; };
+		B57168111A2F100200921078 /* NodeHeader.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NodeHeader.txt; sourceTree = "<group>"; };
+		B57168131A2F103500921078 /* NodeFooter.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NodeFooter.txt; sourceTree = "<group>"; };
+		B57168151A2F106700921078 /* NodeSection3.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NodeSection3.txt; sourceTree = "<group>"; };
+		B57168171A2F10B700921078 /* EdgeHeader.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EdgeHeader.txt; sourceTree = "<group>"; };
+		B57168191A2F10D500921078 /* EdgeSection2White.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EdgeSection2White.txt; sourceTree = "<group>"; };
+		B571681B1A2F10EC00921078 /* EdgeFooter.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EdgeFooter.txt; sourceTree = "<group>"; };
+		B571681D1A2F110C00921078 /* KMLFooter.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = KMLFooter.txt; sourceTree = "<group>"; };
+		B57168231A2F143700921078 /* coordinateData.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = coordinateData.txt; sourceTree = "<group>"; };
+		B57168251A3183DB00921078 /* input.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = input.txt; sourceTree = "<group>"; };
+		B57168271A31841700921078 /* output.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = output.txt; sourceTree = "<group>"; };
+		B573B4171A31A55A0093F06B /* NodeSection4.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NodeSection4.txt; sourceTree = "<group>"; };
+		B58B50EA1A51CC6600407BB1 /* Invisible.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Invisible.txt; sourceTree = "<group>"; };
+		B58B50EC1A51CC7900407BB1 /* FolderSection2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FolderSection2.txt; sourceTree = "<group>"; };
+		B58B50EE1A51CC8C00407BB1 /* FolderHeader.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FolderHeader.txt; sourceTree = "<group>"; };
+		B58B50F01A51CCBD00407BB1 /* FolderFooter.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FolderFooter.txt; sourceTree = "<group>"; };
+		B58B50F21A51CCE400407BB1 /* FolderOpen.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FolderOpen.txt; sourceTree = "<group>"; };
+		B58B50F41A51D61A00407BB1 /* graph.kml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = graph.kml; sourceTree = "<group>"; };
+		B58B50F61A51D91500407BB1 /* NodeSection2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NodeSection2.txt; sourceTree = "<group>"; };
+		B58B50F81A51F1A400407BB1 /* EdgeSection2Blue.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EdgeSection2Blue.txt; sourceTree = "<group>"; };
+		B58B50FB1A522BE600407BB1 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		B58B51011A526A1300407BB1 /* NodeAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NodeAnnotation.swift; sourceTree = "<group>"; };
+		B58B510B1A52720A00407BB1 /* Junction.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Junction.png; sourceTree = "<group>"; };
+		B5BAF2FE1A2EDD4F00DE1262 /* nodes,edges.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "nodes,edges.txt"; sourceTree = "<group>"; };
+		B5BAF3001A2EDD8000DE1262 /* GraphReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphReader.swift; sourceTree = "<group>"; };
+		B5EE37571A3EBE26004F483C /* Coordinate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
+		B5EE37891A47E706004F483C /* SceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SceneKit.framework; path = System/Library/Frameworks/SceneKit.framework; sourceTree = SDKROOT; };
+		B5EE378B1A480DA4004F483C /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +157,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B58B50FC1A522BE600407BB1 /* MapKit.framework in Frameworks */,
+				B5EE378D1A480E64004F483C /* GLKit.framework in Frameworks */,
+				B5EE378A1A47E706004F483C /* SceneKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +176,9 @@
 		B514795A1A26F075004A7C76 = {
 			isa = PBXGroup;
 			children = (
+				B58B50FB1A522BE600407BB1 /* MapKit.framework */,
+				B5EE378B1A480DA4004F483C /* GLKit.framework */,
+				B5EE37891A47E706004F483C /* SceneKit.framework */,
 				B51479651A26F076004A7C76 /* Graphs */,
 				B514797E1A26F076004A7C76 /* GraphsTests */,
 				B51479641A26F076004A7C76 /* Products */,
@@ -79,13 +197,48 @@
 		B51479651A26F076004A7C76 /* Graphs */ = {
 			isa = PBXGroup;
 			children = (
+				B550B3561A5A5B8B005A9C4A /* delete.png */,
+				B550B3541A5A507D005A9C4A /* parkingThin.png */,
+				B550B3521A5A0282005A9C4A /* walking.png */,
+				B550B3501A5A0192005A9C4A /* night.png */,
+				B550B34E1A59FB35005A9C4A /* arrow.png */,
+				B550B34C1A59F967005A9C4A /* confirm.png */,
+				B550B3461A59EC66005A9C4A /* junctionRed.png */,
+				B550B3471A59EC66005A9C4A /* parkingRed.png */,
+				B550B3481A59EC66005A9C4A /* POIRed.png */,
+				B550B3441A59EBFA005A9C4A /* picnicRed.png */,
+				B550B3421A59E698005A9C4A /* campRed.png */,
+				B550B3401A5609FD005A9C4A /* destinationIcon.png */,
+				B550B33E1A5609DA005A9C4A /* waypointIcon.png */,
+				B507A6091A529706003BD723 /* POI.png */,
+				B507A60A1A529706003BD723 /* Picnic.png */,
+				B507A60B1A529706003BD723 /* Camp.png */,
+				B507A60C1A529706003BD723 /* Parking.png */,
+				B58B510B1A52720A00407BB1 /* Junction.png */,
+				B58B50FA1A522B7800407BB1 /* MapKit */,
+				B57168271A31841700921078 /* output.txt */,
+				B57168251A3183DB00921078 /* input.txt */,
+				B573B4191A3411A10093F06B /* KML */,
+				B5BAF2FE1A2EDD4F00DE1262 /* nodes,edges.txt */,
+				B57168231A2F143700921078 /* coordinateData.txt */,
+				B53D70E71A81160700D75A4A /* rivers.txt */,
 				B51479681A26F076004A7C76 /* AppDelegate.swift */,
 				B514796D1A26F076004A7C76 /* ViewController.swift */,
+				B51479971A2A8359004A7C76 /* Dijkstra.swift */,
+				B5BAF3001A2EDD8000DE1262 /* GraphReader.swift */,
+				B53D70E91A81163A00D75A4A /* RiverReader.swift */,
+				B507A6131A55F45E003BD723 /* ElevationGetter.swift */,
+				B51479931A295653004A7C76 /* Route.swift */,
+				B514798F1A294560004A7C76 /* Graph.swift */,
+				B514798B1A291B48004A7C76 /* Node.swift */,
+				B514798D1A291C9C004A7C76 /* Edge.swift */,
+				B5EE37571A3EBE26004F483C /* Coordinate.swift */,
 				B514796F1A26F076004A7C76 /* Main.storyboard */,
 				B51479721A26F076004A7C76 /* Images.xcassets */,
 				B51479741A26F076004A7C76 /* LaunchScreen.xib */,
 				B514796A1A26F076004A7C76 /* Graphs.xcdatamodeld */,
 				B51479661A26F076004A7C76 /* Supporting Files */,
+				B507A6151A55FA3D003BD723 /* CalloutView.swift */,
 			);
 			path = Graphs;
 			sourceTree = "<group>";
@@ -113,6 +266,40 @@
 				B51479801A26F076004A7C76 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B573B4191A3411A10093F06B /* KML */ = {
+			isa = PBXGroup;
+			children = (
+				B571680B1A2F0C0600921078 /* KMLWriter.swift */,
+				B571680D1A2F0E4400921078 /* output.kml */,
+				B58B50F41A51D61A00407BB1 /* graph.kml */,
+				B571680F1A2F0FE500921078 /* KMLHeader.txt */,
+				B571681D1A2F110C00921078 /* KMLFooter.txt */,
+				B58B50EE1A51CC8C00407BB1 /* FolderHeader.txt */,
+				B58B50F21A51CCE400407BB1 /* FolderOpen.txt */,
+				B58B50EC1A51CC7900407BB1 /* FolderSection2.txt */,
+				B58B50F01A51CCBD00407BB1 /* FolderFooter.txt */,
+				B57168111A2F100200921078 /* NodeHeader.txt */,
+				B58B50F61A51D91500407BB1 /* NodeSection2.txt */,
+				B57168151A2F106700921078 /* NodeSection3.txt */,
+				B573B4171A31A55A0093F06B /* NodeSection4.txt */,
+				B57168131A2F103500921078 /* NodeFooter.txt */,
+				B57168171A2F10B700921078 /* EdgeHeader.txt */,
+				B57168191A2F10D500921078 /* EdgeSection2White.txt */,
+				B58B50F81A51F1A400407BB1 /* EdgeSection2Blue.txt */,
+				B571681B1A2F10EC00921078 /* EdgeFooter.txt */,
+				B58B50EA1A51CC6600407BB1 /* Invisible.txt */,
+			);
+			name = KML;
+			sourceTree = "<group>";
+		};
+		B58B50FA1A522B7800407BB1 /* MapKit */ = {
+			isa = PBXGroup;
+			children = (
+				B58B51011A526A1300407BB1 /* NodeAnnotation.swift */,
+			);
+			name = MapKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,6 +351,7 @@
 				TargetAttributes = {
 					B51479621A26F076004A7C76 = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = XL9PR4L78Q;
 					};
 					B514797A1A26F076004A7C76 = {
 						CreatedOnToolsVersion = 6.1;
@@ -195,9 +383,50 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B550B3531A5A0282005A9C4A /* walking.png in Resources */,
+				B550B34A1A59EC66005A9C4A /* parkingRed.png in Resources */,
+				B550B34B1A59EC66005A9C4A /* POIRed.png in Resources */,
+				B58B50F11A51CCBD00407BB1 /* FolderFooter.txt in Resources */,
+				B58B50F91A51F1A400407BB1 /* EdgeSection2Blue.txt in Resources */,
+				B58B50EB1A51CC6600407BB1 /* Invisible.txt in Resources */,
+				B507A60D1A529706003BD723 /* POI.png in Resources */,
+				B550B34D1A59F967005A9C4A /* confirm.png in Resources */,
+				B550B33F1A5609DA005A9C4A /* waypointIcon.png in Resources */,
+				B58B50F31A51CCE400407BB1 /* FolderOpen.txt in Resources */,
+				B571681E1A2F110C00921078 /* KMLFooter.txt in Resources */,
+				B53D70E81A81160700D75A4A /* rivers.txt in Resources */,
+				B57168281A31841700921078 /* output.txt in Resources */,
+				B571681A1A2F10D500921078 /* EdgeSection2White.txt in Resources */,
+				B507A6101A529706003BD723 /* Parking.png in Resources */,
+				B58B510C1A52720A00407BB1 /* Junction.png in Resources */,
+				B573B4181A31A55A0093F06B /* NodeSection4.txt in Resources */,
+				B58B50F51A51D61A00407BB1 /* graph.kml in Resources */,
+				B550B3491A59EC66005A9C4A /* junctionRed.png in Resources */,
+				B57168241A2F143700921078 /* coordinateData.txt in Resources */,
+				B57168141A2F103500921078 /* NodeFooter.txt in Resources */,
 				B51479711A26F076004A7C76 /* Main.storyboard in Resources */,
+				B550B3431A59E698005A9C4A /* campRed.png in Resources */,
+				B507A60F1A529706003BD723 /* Camp.png in Resources */,
+				B550B3411A5609FD005A9C4A /* destinationIcon.png in Resources */,
+				B58B50F71A51D91500407BB1 /* NodeSection2.txt in Resources */,
+				B507A60E1A529706003BD723 /* Picnic.png in Resources */,
+				B57168121A2F100200921078 /* NodeHeader.txt in Resources */,
+				B571681C1A2F10EC00921078 /* EdgeFooter.txt in Resources */,
+				B550B3571A5A5B8B005A9C4A /* delete.png in Resources */,
 				B51479761A26F076004A7C76 /* LaunchScreen.xib in Resources */,
+				B57168101A2F0FE500921078 /* KMLHeader.txt in Resources */,
+				B58B50ED1A51CC7900407BB1 /* FolderSection2.txt in Resources */,
+				B550B3551A5A507D005A9C4A /* parkingThin.png in Resources */,
+				B57168261A3183DB00921078 /* input.txt in Resources */,
+				B550B34F1A59FB35005A9C4A /* arrow.png in Resources */,
+				B550B3451A59EBFA005A9C4A /* picnicRed.png in Resources */,
+				B5BAF2FF1A2EDD5000DE1262 /* nodes,edges.txt in Resources */,
+				B58B50EF1A51CC8C00407BB1 /* FolderHeader.txt in Resources */,
+				B57168181A2F10B700921078 /* EdgeHeader.txt in Resources */,
+				B571680E1A2F0E4400921078 /* output.kml in Resources */,
 				B51479731A26F076004A7C76 /* Images.xcassets in Resources */,
+				B550B3511A5A0192005A9C4A /* night.png in Resources */,
+				B57168161A2F106700921078 /* NodeSection3.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,9 +444,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B51479901A294560004A7C76 /* Graph.swift in Sources */,
+				B5BAF3011A2EDD8000DE1262 /* GraphReader.swift in Sources */,
 				B514796E1A26F076004A7C76 /* ViewController.swift in Sources */,
+				B571680C1A2F0C0600921078 /* KMLWriter.swift in Sources */,
 				B514796C1A26F076004A7C76 /* Graphs.xcdatamodeld in Sources */,
+				B53D70EA1A81163A00D75A4A /* RiverReader.swift in Sources */,
+				B5EE37581A3EBE26004F483C /* Coordinate.swift in Sources */,
 				B51479691A26F076004A7C76 /* AppDelegate.swift in Sources */,
+				B507A6161A55FA3D003BD723 /* CalloutView.swift in Sources */,
+				B514798E1A291C9C004A7C76 /* Edge.swift in Sources */,
+				B51479941A295653004A7C76 /* Route.swift in Sources */,
+				B507A6141A55F45E003BD723 /* ElevationGetter.swift in Sources */,
+				B58B51021A526A1300407BB1 /* NodeAnnotation.swift in Sources */,
+				B514798C1A291B48004A7C76 /* Node.swift in Sources */,
+				B51479981A2A8359004A7C76 /* Dijkstra.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,9 +581,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Graphs/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -350,9 +595,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Graphs/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
@@ -409,6 +658,7 @@
 				B51479871A26F076004A7C76 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B51479881A26F076004A7C76 /* Build configuration list for PBXNativeTarget "GraphsTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +667,7 @@
 				B514798A1A26F076004A7C76 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

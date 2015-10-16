@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<StyleMap id="msn_ylw-pushpin">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin">
+		<LineStyle>
+			<color>bfd36e40</color>
+			<width>8</width>
+		</LineStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin">
+		<IconStyle>
+			<scale>1.2</scale>
+		</IconStyle>
+		<LineStyle>
+			<color>bfd36e40</color>
+			<width>5</width>
+		</LineStyle>
+	</Style>
+    <StyleMap id="msn_ylw-pushpin2">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#sn_ylw-pushpin2</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#sh_ylw-pushpin2</styleUrl>
+        </Pair>
+    </StyleMap>
+    <Style id="sn_ylw-pushpin2">
+        <LineStyle>
+            <color>ffffffff</color>
+            <width>1</width>
+        </LineStyle>
+    </Style>
+    <Style id="sh_ylw-pushpin2">
+        <IconStyle>
+            <scale>1.2</scale>
+        </IconStyle>
+        <LineStyle>
+            <color>ffffffff</color>
+            <width>1</width>
+        </LineStyle>
+    </Style>
+	<Style id="sh_campground8">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/campground.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_campground4">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/campground.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_campground6">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_campground4</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_campground8</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_placemark_circle_highlight">
+		<IconStyle>
+			<color>ff4ce373</color>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle_highlight.png</href>
+			</Icon>
+		</IconStyle>
+		<ListStyle>
+		</ListStyle>
+	</Style>
+	<StyleMap id="msn_placemark_circle">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_placemark_circle</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_placemark_circle_highlight</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_placemark_circle">
+		<IconStyle>
+			<color>ff4ce373</color>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+			</Icon>
+		</IconStyle>
+		<ListStyle>
+		</ListStyle>
+	</Style>
+	<Style id="sn_parking_lot">
+		<IconStyle>
+			<color>ff4ce373</color>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/parking_lot.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+		<ListStyle>
+		</ListStyle>
+	</Style>
+	<StyleMap id="msn_parking_lot">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_parking_lot</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_parking_lot</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_parking_lot">
+		<IconStyle>
+			<color>ff4ce373</color>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/parking_lot.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+		<ListStyle>
+		</ListStyle>
+	</Style>
+	<Style id="sn_picnic0">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/picnic.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_picnic0">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/picnic.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_picnic">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_picnic0</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_picnic0</styleUrl>
+		</Pair>
+	</StyleMap>
+    <Style id="sh_open-diamond">
+        <IconStyle>
+            <color>ff4ce373</color>
+            <scale>1.4</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/shapes/open-diamond.png</href>
+            </Icon>
+        </IconStyle>
+        <ListStyle>
+        </ListStyle>
+    </Style>
+    <Style id="sn_open-diamond">
+        <IconStyle>
+            <color>ff15ff00</color>
+            <scale>1.2</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/shapes/open-diamond.png</href>
+            </Icon>
+        </IconStyle>
+        <ListStyle>
+        </ListStyle>
+    </Style>
+    <StyleMap id="msn_open-diamond">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#sn_open-diamond</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#sh_open-diamond</styleUrl>
+        </Pair>
+    </StyleMap>		<Placemark>
+			<name>Your Route</name>
+            <styleUrl>#msn_ylw-pushpin</styleUrl>
+			<LineString>
+				<tessellate>1</tessellate>
+				<coordinates>
+					-121.599655816874,36.2232651932653,0 -121.599717709186,36.2232377289208,0 -121.59979628445,36.2232155529264,0 -121.599793186923,36.2231727462889,0 -121.599702585212,36.2231208126937,0 -121.599630040637,36.2231003667757,0 -121.599635364603,36.2230447269043,0 -121.599689548381,36.2229867638222,0 -121.5997767653,36.2229895110191,0 -121.599848849605,36.2229932203257,0 -121.599857434333,36.2229100828275,0 -121.599816894531,36.2228564402796,0 -121.599779958573,36.2228071935424,0 -121.599700765833,36.2228148325971,0 -121.599667529767,36.2228109540267,0 -121.599695618385,36.2227614387727,0 -121.59965609827,36.2227121590385,0 -121.599595218067,36.2226390624935,0 -121.599543764833,36.2225907939012,0 -121.599525495396,36.2224962529598,0 -121.599534461447,36.2224555624051,0 -121.599580073056,36.2224567784675,0 -121.599580614272,36.222353398429,0 -121.599662693741,36.222283658333,0 -121.599754964695,36.2222014328698,0  
+				</coordinates>
+			</LineString>
+		</Placemark>
+</Document>
+</kml>

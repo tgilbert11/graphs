@@ -1,5 +1,5 @@
 //
-//  CalloutViewController.swift
+//  CalloutView.swift
 //  Graphs
 //
 //  Created by Taylor H. Gilbert on 1/1/15.
@@ -7,3 +7,12 @@
 //
 
 import Foundation
+import UIKit
+
+class CalloutView: UIView {
+
+    required init(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
+}

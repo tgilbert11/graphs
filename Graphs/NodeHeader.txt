@@ -1,5 +1,1 @@
 		<Placemark>
-			<name>Church Creek Divide</name>
-			<Point>
-				<gx:drawOrder>1</gx:drawOrder>
-				<coordinates>

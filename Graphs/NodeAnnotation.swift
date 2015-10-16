@@ -7,3 +7,14 @@
 //
 
 import Foundation
+import MapKit
+
+class NodeAnnotation: MKPointAnnotation {
+    
+    let node: Node
+    
+    init(node: Node) {
+        self.node = node
+    }
+    
+}
