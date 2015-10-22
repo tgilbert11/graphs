@@ -14,14 +14,15 @@ class RiverReader {
     class func readRiver() -> [MKPolyline] {
         
         let path = NSBundle.mainBundle().pathForResource("rivers", ofType: "txt")!
-        let text = String(contentsOfFile: path, encoding: NSUTF8StringEncoding, error: nil)!
+        let text = try! String(contentsOfFile: path, encoding: NSUTF8StringEncoding)
+        
         let lines: [String] = text.componentsSeparatedByString("\n")
         
         var list: [MKPolyline] = []
         
         for line in lines {
             let split = line.componentsSeparatedByString(";")
-            let value = split[0].toInt()!
+            let value = Int(split[0])!
             let coordinatesString = split[1].componentsSeparatedByString(" ")
             var coordinates: [CLLocationCoordinate2D] = []
             for coordinate in coordinatesString {

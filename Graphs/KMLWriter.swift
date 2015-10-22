@@ -12,21 +12,21 @@ class KMLWriter {
     
     class func KMLForEntireGraph(graph: Graph, clean: Bool) {
         //  KML
-        var KML = String(contentsOfFile: NSBundle.mainBundle().pathForResource("KMLHeader", ofType: "txt")!, encoding: NSUTF8StringEncoding, error: nil)!
+        var KML = try! String(contentsOfFile: NSBundle.mainBundle().pathForResource("KMLHeader", ofType: "txt")!, encoding: NSUTF8StringEncoding)
         
         //  Waypoints
-        KML += String(contentsOfFile: NSBundle.mainBundle().pathForResource("FolderHeader", ofType: "txt")!, encoding: NSUTF8StringEncoding, error: nil)!
+        KML += try! String(contentsOfFile: NSBundle.mainBundle().pathForResource("FolderHeader", ofType: "txt")!, encoding: NSUTF8StringEncoding)
         KML += "Waypoints"
-        KML += String(contentsOfFile: NSBundle.mainBundle().pathForResource("FolderSection2", ofType: "txt")!, encoding: NSUTF8StringEncoding, error: nil)!
-        KML += String(contentsOfFile: NSBundle.mainBundle().pathForResource("FolderOpen", ofType: "txt")!, encoding: NSUTF8StringEncoding, error: nil)!
+        KML += try! String(contentsOfFile: NSBundle.mainBundle().pathForResource("FolderSection2", ofType: "txt")!, encoding: NSUTF8StringEncoding)
+        KML += try! String(contentsOfFile: NSBundle.mainBundle().pathForResource("FolderOpen", ofType: "txt")!, encoding: NSUTF8StringEncoding)
         
         
         let waypointTypes = ["Camp", "Picnic", "Parking", "POI", "Junction"]
         
         for type in waypointTypes {
-            KML += String(contentsOfFile: NSBundle.mainBundle().pathForResource("FolderHeader", ofType: "txt")!, encoding: NSUTF8StringEncoding, error: nil)!
+            KML += try! String(contentsOfFile: NSBundle.mainBundle().pathForResource("FolderHeader", ofType: "txt")!, encoding: NSUTF8StringEncoding)
             KML += type
-            KML += String(contentsOfFile: NSBundle.mainBundle().pathForResource("FolderSection2", ofType: "txt")!, encoding: NSUTF8StringEncoding, error: nil)!
+            KML += try! String(contentsOfFile: NSBundle.mainBundle().pathForResource("FolderSection2", ofType: "txt")!, encoding: NSUTF8StringEncoding)
             
             for node in graph.nodes {
                 if node.type == type {
@@ -34,15 +34,15 @@ class KMLWriter {
                 }
             }
             
-            KML += String(contentsOfFile: NSBundle.mainBundle().pathForResource("FolderFooter", ofType: "txt")!, encoding: NSUTF8StringEncoding, error: nil)!
+            KML += try! String(contentsOfFile: NSBundle.mainBundle().pathForResource("FolderFooter", ofType: "txt")!, encoding: NSUTF8StringEncoding)
         }
         
-        KML += String(contentsOfFile: NSBundle.mainBundle().pathForResource("FolderFooter", ofType: "txt")!, encoding: NSUTF8StringEncoding, error: nil)!
+        KML += try! String(contentsOfFile: NSBundle.mainBundle().pathForResource("FolderFooter", ofType: "txt")!, encoding: NSUTF8StringEncoding)
         
         //  Trails
-        KML += String(contentsOfFile: NSBundle.mainBundle().pathForResource("FolderHeader", ofType: "txt")!, encoding: NSUTF8StringEncoding, error: nil)!
+        KML += try! String(contentsOfFile: NSBundle.mainBundle().pathForResource("FolderHeader", ofType: "txt")!, encoding: NSUTF8StringEncoding)
         KML += "Trails"
-        KML += String(contentsOfFile: NSBundle.mainBundle().pathForResource("FolderSection2", ofType: "txt")!, encoding: NSUTF8StringEncoding, error: nil)!
+        KML += try! String(contentsOfFile: NSBundle.mainBundle().pathForResource("FolderSection2", ofType: "txt")!, encoding: NSUTF8StringEncoding)
         
         var trailUsed: Dictionary<String, Bool> = Dictionary()
         // Each node...
@@ -53,9 +53,9 @@ class KMLWriter {
                     // new trail! fill out the entire trail
                     
                     if clean {
-                        KML += String(contentsOfFile: NSBundle.mainBundle().pathForResource("EdgeHeader", ofType: "txt")!, encoding: NSUTF8StringEncoding, error: nil)!
+                        KML += try! String(contentsOfFile: NSBundle.mainBundle().pathForResource("EdgeHeader", ofType: "txt")!, encoding: NSUTF8StringEncoding)
                         KML += edge.name
-                        KML += String(contentsOfFile: NSBundle.mainBundle().pathForResource("EdgeSection2White", ofType: "txt")!, encoding: NSUTF8StringEncoding, error: nil)!
+                        KML += try! String(contentsOfFile: NSBundle.mainBundle().pathForResource("EdgeSection2White", ofType: "txt")!, encoding: NSUTF8StringEncoding)
                     }
                     
                     var coordinateString = ""
@@ -71,11 +71,11 @@ class KMLWriter {
                                             coordinateString += CoordinatesForEdge(searchEdge, forward: true)
                                         }
                                         else {
-                                            KML += String(contentsOfFile: NSBundle.mainBundle().pathForResource("EdgeHeader", ofType: "txt")!, encoding: NSUTF8StringEncoding, error: nil)!
+                                            KML += try! String(contentsOfFile: NSBundle.mainBundle().pathForResource("EdgeHeader", ofType: "txt")!, encoding: NSUTF8StringEncoding)
                                             KML += String("\(searchEdge.name),\(searchEdge.segment)")
-                                            KML += String(contentsOfFile: NSBundle.mainBundle().pathForResource("EdgeSection2White", ofType: "txt")!, encoding: NSUTF8StringEncoding, error: nil)!
+                                            KML += try! String(contentsOfFile: NSBundle.mainBundle().pathForResource("EdgeSection2White", ofType: "txt")!, encoding: NSUTF8StringEncoding)
                                             KML += CoordinatesForEdge(searchEdge, forward: true)
-                                            KML += String(contentsOfFile: NSBundle.mainBundle().pathForResource("EdgeFooter", ofType: "txt")!, encoding: NSUTF8StringEncoding, error: nil)!
+                                            KML += try! String(contentsOfFile: NSBundle.mainBundle().pathForResource("EdgeFooter", ofType: "txt")!, encoding: NSUTF8StringEncoding)
                                         }
                                         segmentNumber += 1
                                         segmentFound = true
@@ -90,7 +90,7 @@ class KMLWriter {
                     
                     if clean {
                         KML += coordinateString
-                        KML += String(contentsOfFile: NSBundle.mainBundle().pathForResource("EdgeFooter", ofType: "txt")!, encoding: NSUTF8StringEncoding, error: nil)!
+                        KML += try! String(contentsOfFile: NSBundle.mainBundle().pathForResource("EdgeFooter", ofType: "txt")!, encoding: NSUTF8StringEncoding)
                     }
                     
                     trailUsed[edge.name] = true
@@ -99,23 +99,23 @@ class KMLWriter {
             }
         }
         
-        KML += String(contentsOfFile: NSBundle.mainBundle().pathForResource("FolderFooter", ofType: "txt")!, encoding: NSUTF8StringEncoding, error: nil)!
+        KML += try! String(contentsOfFile: NSBundle.mainBundle().pathForResource("FolderFooter", ofType: "txt")!, encoding: NSUTF8StringEncoding)
         
         //  end of KML
-        KML += String(contentsOfFile: NSBundle.mainBundle().pathForResource("KMLFooter", ofType: "txt")!, encoding: NSUTF8StringEncoding, error: nil)!
+        KML += try! String(contentsOfFile: NSBundle.mainBundle().pathForResource("KMLFooter", ofType: "txt")!, encoding: NSUTF8StringEncoding)
         
-        KML.writeToFile("/Users/taylorg/Local Reference/Graphs/Graphs/graph.kml", atomically: true, encoding:NSUTF8StringEncoding, error: nil)
+        try! KML.writeToFile("/Users/taylorg/Local Reference/Graphs/Graphs/graph.kml", atomically: true, encoding:NSUTF8StringEncoding)
     }   
     
     class func writeKML(route: Route, pathOnly: Bool) {
         
         var content: String = KMLForRoute(route, pathOnly: pathOnly)
-        content.writeToFile("/Users/taylorg/Local Reference/Graphs/Graphs/output.kml", atomically: true, encoding:NSUTF8StringEncoding, error: nil)
+        try! content.writeToFile("/Users/taylorg/Local Reference/Graphs/Graphs/output.kml", atomically: true, encoding:NSUTF8StringEncoding)
     }
     
     class func KMLForRoute(route: Route, pathOnly: Bool) -> String {
         
-        var KML = String(contentsOfFile: NSBundle.mainBundle().pathForResource("KMLHeader", ofType: "txt")!, encoding: NSUTF8StringEncoding, error: nil)!
+        var KML = try! String(contentsOfFile: NSBundle.mainBundle().pathForResource("KMLHeader", ofType: "txt")!, encoding: NSUTF8StringEncoding)
         var pathCoordinates = ""
         let pathName = "Your Route"
         
@@ -139,24 +139,24 @@ class KMLWriter {
             KML += KMLForNode(currentNode, visible: true)
         }
         
-        KML += String(contentsOfFile: NSBundle.mainBundle().pathForResource("KMLFooter", ofType: "txt")!, encoding: NSUTF8StringEncoding, error: nil)!
+        KML += try! String(contentsOfFile: NSBundle.mainBundle().pathForResource("KMLFooter", ofType: "txt")!, encoding: NSUTF8StringEncoding)
         
         return KML
     }
     
     class func KMLForNode (node: Node, visible: Bool) -> String {
-        var header = String(contentsOfFile: NSBundle.mainBundle().pathForResource("NodeHeader", ofType: "txt")!, encoding: NSUTF8StringEncoding, error: nil)!
+        var header = try! String(contentsOfFile: NSBundle.mainBundle().pathForResource("NodeHeader", ofType: "txt")!, encoding: NSUTF8StringEncoding)
         
         if !visible {
-            header += String(contentsOfFile: NSBundle.mainBundle().pathForResource("Invisible", ofType: "txt")!, encoding: NSUTF8StringEncoding, error: nil)!
+            header += try! String(contentsOfFile: NSBundle.mainBundle().pathForResource("Invisible", ofType: "txt")!, encoding: NSUTF8StringEncoding)
         }
-        let section2 = String(contentsOfFile: NSBundle.mainBundle().pathForResource("NodeSection2", ofType: "txt")!, encoding: NSUTF8StringEncoding, error: nil)!
+        let section2 = try! String(contentsOfFile: NSBundle.mainBundle().pathForResource("NodeSection2", ofType: "txt")!, encoding: NSUTF8StringEncoding)
         let name = node.name
         
-        let section3 = String(contentsOfFile: NSBundle.mainBundle().pathForResource("NodeSection3", ofType: "txt")!, encoding: NSUTF8StringEncoding, error: nil)!
+        let section3 = try! String(contentsOfFile: NSBundle.mainBundle().pathForResource("NodeSection3", ofType: "txt")!, encoding: NSUTF8StringEncoding)
         let coordinateString = "\(node.coordinate.longitude),\(node.coordinate.latitude),0 "
         
-        let section4 = String(contentsOfFile: NSBundle.mainBundle().pathForResource("NodeSection4", ofType: "txt")!, encoding: NSUTF8StringEncoding, error: nil)!
+        let section4 = try! String(contentsOfFile: NSBundle.mainBundle().pathForResource("NodeSection4", ofType: "txt")!, encoding: NSUTF8StringEncoding)
         
         var placemarkStyleString: String = ""
         switch (node.type) {
@@ -174,7 +174,7 @@ class KMLWriter {
             placemarkStyleString = ""
         }
         
-        let footer = String(contentsOfFile: NSBundle.mainBundle().pathForResource("NodeFooter", ofType: "txt")!, encoding: NSUTF8StringEncoding, error: nil)!
+        let footer = try! String(contentsOfFile: NSBundle.mainBundle().pathForResource("NodeFooter", ofType: "txt")!, encoding: NSUTF8StringEncoding)
         
         return String("\(header)\(section2)\(name)\(section3)\(placemarkStyleString)\(section4)\(coordinateString)\(footer)")
     }
@@ -198,11 +198,11 @@ class KMLWriter {
     }
     
     class func KMLForPath(pathName: String, pathCoordinates: String) -> String {
-        let header = String(contentsOfFile: NSBundle.mainBundle().pathForResource("EdgeHeader", ofType: "txt")!, encoding: NSUTF8StringEncoding, error: nil)!
+        let header = try! String(contentsOfFile: NSBundle.mainBundle().pathForResource("EdgeHeader", ofType: "txt")!, encoding: NSUTF8StringEncoding)
         let name = pathName
-        let section2 = String(contentsOfFile: NSBundle.mainBundle().pathForResource("EdgeSection2Blue", ofType: "txt")!, encoding: NSUTF8StringEncoding, error: nil)!
+        let section2 = try! String(contentsOfFile: NSBundle.mainBundle().pathForResource("EdgeSection2Blue", ofType: "txt")!, encoding: NSUTF8StringEncoding)
         let coordinateString = pathCoordinates
-        let footer = String(contentsOfFile: NSBundle.mainBundle().pathForResource("EdgeFooter", ofType: "txt")!, encoding: NSUTF8StringEncoding, error: nil)!
+        let footer = try! String(contentsOfFile: NSBundle.mainBundle().pathForResource("EdgeFooter", ofType: "txt")!, encoding: NSUTF8StringEncoding)
         
         return String("\(header)\(name)\(section2)\(coordinateString)\(footer)")
     }

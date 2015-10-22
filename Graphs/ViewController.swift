@@ -157,9 +157,9 @@ class ViewController: UIViewController, MKMapViewDelegate, UIGestureRecognizerDe
         startedMethodNamed("mapView:didSelectAnnotationView:")
         self.lastSelectedAnnotationView = view
         //println("new lastSelectedAnnotationView: \((self.lastSelectedAnnotationView!.annotation as NodeAnnotation).node.name)")
-        if view.annotation.isKindOfClass(NodeAnnotation) {
+        if view.annotation!.isKindOfClass(NodeAnnotation) {
             
-            let nodeAnnotation = view.annotation as NodeAnnotation
+            let nodeAnnotation = view.annotation as! NodeAnnotation
             let node: Node = nodeAnnotation.node
             clearRoutes(false, andAlsoClearTest: true)
             //println("exited clearRoutes 4")
@@ -169,9 +169,9 @@ class ViewController: UIViewController, MKMapViewDelegate, UIGestureRecognizerDe
             if !isReAddingAnnotation {
                 isReAddingAnnotation = true
                 let annotation = view.annotation
-                self.mapView.removeAnnotation(annotation)
-                self.mapView.addAnnotation(annotation)
-                self.mapView.selectAnnotation(annotation, animated: true)
+                self.mapView.removeAnnotation(annotation!)
+                self.mapView.addAnnotation(annotation!)
+                self.mapView.selectAnnotation(annotation!, animated: true)
                 isReAddingAnnotation = false
             }
             else if self.waypoints.count > 0 && !routeCompleted {
@@ -233,7 +233,7 @@ class ViewController: UIViewController, MKMapViewDelegate, UIGestureRecognizerDe
                     if object.isKindOfClass(NodeAnnotation) {
                         //println("object is NodeAnnotation")
                         let annotationView = self.mapView.viewForAnnotation(object as MKAnnotation)
-                        annotationView.image = annotationViewImageForNode((object as NodeAnnotation).node, highlighted: false)
+                        annotationView!.image = annotationViewImageForNode((object as! NodeAnnotation).node, highlighted: false)
                     }
                 }
             }
@@ -241,7 +241,7 @@ class ViewController: UIViewController, MKMapViewDelegate, UIGestureRecognizerDe
                 //println("overlay loop iteration")
                 if overlay.isKindOfClass(MKPolyline) {
                     //println("overlay is MKOverlay")
-                    let mkPolyline = overlay as MKPolyline
+                    let mkPolyline = overlay as! MKPolyline
                     var doesOverlayExistInRoutes = false
                     //println("started doesExist comparison")
                     for route in self.routeSegments {
@@ -281,10 +281,10 @@ class ViewController: UIViewController, MKMapViewDelegate, UIGestureRecognizerDe
                 if annotation.isKindOfClass(MKPointAnnotation) {
                     //println("a fourth place")
                     //println("self.mapView: \(self.mapView != nil)")
-                    let annotationView: MKAnnotationView? = self.mapView.viewForAnnotation(annotation as MKPointAnnotation)
+                    let annotationView: MKAnnotationView? = self.mapView.viewForAnnotation(annotation as! MKPointAnnotation)
                     if annotationView != nil {
                         let scale = scaleRightNow()
-                        self.mapView.viewForAnnotation((annotation as MKPointAnnotation)).transform = CGAffineTransformMakeScale(scale, scale)
+                        self.mapView.viewForAnnotation((annotation as! MKPointAnnotation))!.transform = CGAffineTransformMakeScale(scale, scale)
                     }
                     else {
                         //println("huh.")
@@ -318,7 +318,7 @@ class ViewController: UIViewController, MKMapViewDelegate, UIGestureRecognizerDe
         startedMethodNamed("mapView:rendererForOverlay:")
         if overlay.isKindOfClass(MKPolyline) {
             var polylineRenderer = MKPolylineRenderer(overlay: overlay)
-            let overlayFirstFive = overlay.title!.substringToIndex(advance(overlay.title!.startIndex, 5))
+            let overlayFirstFive = overlay.title!.substringToIndex(advance(overlay.title!!.startIndex, 5))
             if overlayFirstFive == "testR" {
                 polylineRenderer.strokeColor = UIColor.orangeColor().colorWithAlphaComponent(0.5)
                 polylineRenderer.lineWidth = 4
@@ -329,7 +329,7 @@ class ViewController: UIViewController, MKMapViewDelegate, UIGestureRecognizerDe
             }
             else if overlayFirstFive == "river" {
                 polylineRenderer.strokeColor = UIColor.blueColor().colorWithAlphaComponent(0.7)
-                let riverBits = overlay.title!.componentsSeparatedByString(":")
+                let riverBits = overlay.title!!.componentsSeparatedByString(":")
                 let riverSize = riverBits[1].toInt()!
                 polylineRenderer.lineWidth = CGFloat(Double(riverSize)/17+1)
             }
@@ -346,11 +346,11 @@ class ViewController: UIViewController, MKMapViewDelegate, UIGestureRecognizerDe
         startedMethodNamed("mapView:viewForAnnotation:")
         //println("view for annotation")
         if annotation.isKindOfClass(NodeAnnotation) {
-            let annotationReuseIdentifier = String("\((annotation as NodeAnnotation).node.name)")
+            let annotationReuseIdentifier = String("\((annotation as! NodeAnnotation).node.name)")
             var annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: annotationReuseIdentifier)
             //var annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "node")
             annotationView.canShowCallout = true
-            let node = (annotation as NodeAnnotation).node
+            let node = (annotationas!s NodeAnnotation).node
             var nodeInWaypoints = false
             for testNode in self.waypoints {
                 if node == testNode {
@@ -363,7 +363,7 @@ class ViewController: UIViewController, MKMapViewDelegate, UIGestureRecognizerDe
             
             
             if self.waypoints.count == 0 || routeCompleted {
-                var button = UIButton.buttonWithType(UIButtonType.ContactAdd) as UIButton
+                var button = UIButton(type: UIButtonType.ContactAdd) as UIButton
                 button.setImage(UIImage(named: "arrow.png"), forState: UIControlState.Normal)
                 button.setTitle("\(node.name);1", forState: UIControlState.Normal)
                 annotationView.rightCalloutAccessoryView = button
@@ -374,21 +374,21 @@ class ViewController: UIViewController, MKMapViewDelegate, UIGestureRecognizerDe
                 var buttonView = UIView(frame: CGRectMake(0, 0, 93, 22))
                 
                 var button1View = UIView(frame: CGRectMake(5, 0, 22, 22))
-                var button1 = UIButton.buttonWithType(UIButtonType.ContactAdd) as UIButton
+                var button1 = UIButton(type: UIButtonType.ContactAdd) as UIButton
                 button1.setImage(UIImage(named: "walking.png"), forState: UIControlState.Normal)
                 button1.setTitle("\(node.name);1", forState: UIControlState.Normal)
                 button1.addTarget(self, action: "didTapActionButton:", forControlEvents: UIControlEvents.TouchUpInside)
                 button1View.addSubview(button1)
                 
                 var button2View = UIView(frame: CGRectMake(38, 0, 22, 22))
-                var button2 = UIButton.buttonWithType(UIButtonType.ContactAdd) as UIButton
+                var button2 = UIButton(type: UIButtonType.ContactAdd) as UIButton
                 button2.setImage(UIImage(named: "night.png"), forState: UIControlState.Normal)
                 button2.setTitle("\(node.name);2", forState: UIControlState.Normal)
                 button2.addTarget(self, action: "didTapActionButton:", forControlEvents: UIControlEvents.TouchUpInside)
                 button2View.addSubview(button2)
                 
                 var button3View = UIView(frame: CGRectMake(71, 0, 22, 22))
-                var button3 = UIButton.buttonWithType(UIButtonType.ContactAdd) as UIButton
+                var button3 = UIButton(type: UIButtonType.ContactAdd) as UIButton
                 button3.setImage(UIImage(named: "parkingThin.png"), forState: UIControlState.Normal)
                 button3.setTitle("\(node.name);3", forState: UIControlState.Normal)
                 button3.addTarget(self, action: "didTapActionButton:", forControlEvents: UIControlEvents.TouchUpInside)
@@ -401,7 +401,7 @@ class ViewController: UIViewController, MKMapViewDelegate, UIGestureRecognizerDe
             }
             else {
                 //println("annotation views equal")
-                var button = UIButton.buttonWithType(UIButtonType.ContactAdd) as UIButton
+                var button = UIButton(type: UIButtonType.ContactAdd) as UIButton
                 button.setImage(UIImage(named: "delete.png"), forState: UIControlState.Normal)
                 button.setTitle("\(node.name);2", forState: UIControlState.Normal)
                 annotationView.rightCalloutAccessoryView = button
@@ -417,15 +417,15 @@ class ViewController: UIViewController, MKMapViewDelegate, UIGestureRecognizerDe
         startedMethodNamed("didTapActionButton:")
         // print("tapped: ")
         if sender.isKindOfClass(UIButton) {
-            let button = sender as UIButton
+            let button = sender as! UIButton
             //println(button.titleForState(UIControlState.Normal)!)
             let titleComponents = button.titleForState(UIControlState.Normal)!.componentsSeparatedByString(";")
             let node = self.graph!.nodeCalled(titleComponents[0])!
-            let buttonNumber = titleComponents[1].toInt()!
+            let buttonNumber = Int(titleComponents[1])!
             //println("\(node.name), button: \(buttonNumber)")
             switch (buttonNumber) {
             case 1:
-                println("walking")
+                print("walking")
                 addPassthrough(node)
             case 2:
                 //println("sleeping")
@@ -445,7 +445,7 @@ class ViewController: UIViewController, MKMapViewDelegate, UIGestureRecognizerDe
         startedMethodNamed("refreshCalloutViewForNode:")
         var annotation: MKAnnotation? = nil
         for testAnnotation in self.mapView.annotations {
-            if (testAnnotation as NodeAnnotation).node == node {
+            if (testAnnotation as! NodeAnnotation).node == node {
                 // println("matched")
                 annotation = (testAnnotation as MKAnnotation)
             }
@@ -456,10 +456,10 @@ class ViewController: UIViewController, MKMapViewDelegate, UIGestureRecognizerDe
     
     func mapView(mapView: MKMapView!, annotationView view: MKAnnotationView!, calloutAccessoryControlTapped control: UIControl!) {
         startedMethodNamed("mapView:annotationView:calloutAccessoryControlTapped:")
-        let node = (view.annotation as NodeAnnotation).node
+        let node = (view.annotation as! NodeAnnotation).node
         //println("\((view.annotation as NodeAnnotation).node.name)")
-        let titleComponents = (control as UIButton).titleForState(UIControlState.Normal)!.componentsSeparatedByString(";")
-        let buttonNumber = titleComponents[1].toInt()!
+        let titleComponents = (control as! UIButton).titleForState(UIControlState.Normal)!.componentsSeparatedByString(";")
+        let buttonNumber = Int(titleComponents[1])!
         
         if buttonNumber == 1 {
             self.addStop(node)
@@ -492,7 +492,7 @@ class ViewController: UIViewController, MKMapViewDelegate, UIGestureRecognizerDe
             if highlighted { image = UIImage(named: "POIRed.png") }
             else { image = UIImage(named: "POI.png") }
         }
-        return UIImage(CGImage: image!.CGImage, scale: 6, orientation: image!.imageOrientation)!
+        return UIImage(CGImage: image!.CGImage!, scale: 6, orientation: image!.imageOrientation)
     }
     
     func addPassthrough(node: Node) {

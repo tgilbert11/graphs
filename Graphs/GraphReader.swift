@@ -15,10 +15,10 @@ class GraphReader {
         var numberOfCoordinates = 0
         
         let path = NSBundle.mainBundle().pathForResource("nodes,edges", ofType: "txt")!
-        let text = String(contentsOfFile: path, encoding: NSUTF8StringEncoding, error: nil)!
+        let text = try! String(contentsOfFile: path, encoding: NSUTF8StringEncoding)
         let lines: [String] = text.componentsSeparatedByString("\n")
         
-        let coordinateData = String(contentsOfFile: NSBundle.mainBundle().pathForResource("coordinateData", ofType: "txt")!, encoding: NSUTF8StringEncoding, error: nil)!
+        let coordinateData = try! String(contentsOfFile: NSBundle.mainBundle().pathForResource("coordinateData", ofType: "txt")!, encoding: NSUTF8StringEncoding)
         let coordinateLines = coordinateData.componentsSeparatedByString("\n")
         
         let graph = Graph(name: "Ventana Wilderness")
@@ -42,7 +42,7 @@ class GraphReader {
                         assert(nodeData.count == 3, "Node data issue on line \(i): " + line)
                         
                         for part: String in nodeData {
-                            assert(countElements(part) > 0, "part too short on line \(i): " + line)
+                            assert(part.characters.count > 0, "part too short on line \(i): " + line)
                         }
                         
                         let nodeName: String? = nodeData[0]
@@ -51,7 +51,7 @@ class GraphReader {
                             assert(node.name != nodeName, "duplicate node name on line \(i): " + line)
                         }
                         
-                        let elevation: Int? = nodeData[1].toInt()
+                        let elevation: Int? = Int(nodeData[1])
                         assert(elevation != nil, "elevation issue on line \(i): " + line)
                         
                         let type: String? = nodeData[2]
@@ -94,11 +94,11 @@ class GraphReader {
                         
                         // Each part has > 0 characters
                         for part: String in edgeData {
-                            assert(countElements(part) > 0, "element too short on line \(i): " + line)
+                            assert(part.characters.count > 0, "element too short on line \(i): " + line)
                         }
                         
                         // Segment Number
-                        let segment: Int? = edgeData[1].toInt()
+                        let segment: Int? = Int(edgeData[1])
                         assert(segment != nil, "segment number issue on line \(i): " + line)
                         
                         // Edge Name
@@ -133,19 +133,19 @@ class GraphReader {
                         var distance: Double?
                         let distanceParts: [String] = edgeData[4].componentsSeparatedByString(".")
                         if distanceParts.count == 1 {
-                            let distanceInt: Int? = distanceParts[0].toInt()
+                            let distanceInt: Int? = Int(distanceParts[0])
                             assert(distanceInt != nil, "distance issue on line \(i): " + line)
                             distance = Double(distanceInt!)
                         }
                         else if distanceParts.count == 2 {
-                            let distanceOnesInt: Int? = distanceParts[0].toInt()
+                            let distanceOnesInt: Int? = Int(distanceParts[0])
                             assert(distanceOnesInt != nil, "distance issue on line \(i): " + line)
-                            let distanceDecimalInt: Int? = distanceParts[1].toInt()
+                            let distanceDecimalInt: Int? = Int(distanceParts[1])
                             assert(distanceDecimalInt != nil, "distance issue on line \(i): " + line)
                             
                             let distanceOnes: Double = Double(distanceOnesInt!)
                             let distanceDecimal: Double = Double(distanceDecimalInt!)
-                            assert(countElements(distanceParts[1]) == 1, "distance issue on line \(i): " + line)
+                            assert(distanceParts[1].characters.count == 1, "distance issue on line \(i): " + line)
                             distance = distanceOnes + distanceDecimal / 10
                         }
                         else {
@@ -153,11 +153,11 @@ class GraphReader {
                         }
                         
                         // Edge Climb
-                        let climb: Int? = edgeData[5].toInt()
+                        let climb: Int? = Int(edgeData[5])
                         assert(climb != nil, "climb issue on line \(i): " + line)
                         
                         // Edge Descent
-                        let descent: Int? = edgeData[6].toInt()
+                        let descent: Int? = Int(edgeData[6])
                         assert(descent != nil, "descent issue on line \(i): " + line)
                         
                         // Coordinate Creation -- UNSAFE
@@ -201,21 +201,24 @@ class GraphReader {
             }
             state++
         }
-        println("number of coordinates: \(numberOfCoordinates)")
+        print("number of coordinates: \(numberOfCoordinates)")
         return graph
     }
     
     class func switchCoordinateOrder() {
         let path = NSBundle.mainBundle().pathForResource("input", ofType: "txt")!
-        let text = String(contentsOfFile: path, encoding: NSUTF8StringEncoding, error: nil)!
+        let text = try! String(contentsOfFile: path, encoding: NSUTF8StringEncoding)
         let lines: [String] = text.componentsSeparatedByString(" ")
         var output: String = ""
         for var i=0 ; i<lines.count ; i++ {
             output += lines[lines.count-1-i]
             output += i==(lines.count-1) ? "" : " "
         }
-        println("switched order")
-        output.writeToFile("/Users/taylorg/Local Reference/Graphs/Graphs/output.txt", atomically: true, encoding:NSUTF8StringEncoding, error: nil)
+        print("switched order")
+        do {
+            try output.writeToFile("/Users/taylorg/Local Reference/Graphs/Graphs/output.txt", atomically: true, encoding:NSUTF8StringEncoding)
+        } catch _ {
+        }
     }
     
 }
