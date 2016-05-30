@@ -70,7 +70,7 @@ class Route {
             }
         }
         print(mostDistantNode.name + " --> distance: ")
-        println(distance())
+        print(distance())
     }
     
     func toEdge() -> Edge {

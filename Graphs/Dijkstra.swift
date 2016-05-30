@@ -31,7 +31,8 @@ class Dijkstra {
             
             for edge in currentNode.edges {
                 let destinationNode: Node = edge.getDestinationNode(currentNode)
-                if contains(visitedNodes, destinationNode) {
+                if visitedNodes.contains(destinationNode) {
+//                if contains(visitedNodes, destinationNode) {
                     continue
                 }
                 let newDistance: Double = currentDistance + edge.getDistanceFrom(currentNode)
@@ -64,7 +65,8 @@ class Dijkstra {
         var shortestNode: Node?
         var shortestDistance: Double = Double.infinity
         for node in graph.nodes {
-            if searchScratchpad[node.name]!.distance <= shortestDistance && !contains(visitedNodes, node){
+            if searchScratchpad[node.name]!.distance <= shortestDistance && !visitedNodes.contains(node){
+//                if searchScratchpad[node.name]!.distance <= shortestDistance && !contains(visitedNodes, node){
                 shortestNode = node
                 shortestDistance = searchScratchpad[node.name]!.distance
             }

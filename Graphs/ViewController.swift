@@ -49,7 +49,7 @@ class ViewController: UIViewController, MKMapViewDelegate, UIGestureRecognizerDe
         super.viewDidLoad()
         
         self.graph = GraphReader.readGraph()
-        KMLWriter.KMLForEntireGraph(self.graph!, clean: false)
+        //KMLWriter.KMLForEntireGraph(self.graph!, clean: false)
         
         //        let sophomoreExpedition = ["Kirk Creek","Vicente Flat","Fresno","Cook Spring","Lost Valley","Indian Valley","Strawberry", "Bear Basin", "Hiding Canyon","Upper Pat Spring", "Bottchers Gap"]
         //        let trip = ["Los Padres Dam","Upper Pat Spring","Hiding Canyon","Los Padres Dam"]
@@ -224,7 +224,7 @@ class ViewController: UIViewController, MKMapViewDelegate, UIGestureRecognizerDe
     
     func clearRoutes(confirmed: Bool, andAlsoClearTest test: Bool) {
         startedMethodNamed("clearRoutes:andAlsoClearTest:")
-        if self.mapView.overlays != nil {
+        if true { //self.mapView.overlays != nil {
             //println("overlays not nil")
             if confirmed {
                 self.waypoints.removeAll(keepCapacity: false)
@@ -254,7 +254,7 @@ class ViewController: UIViewController, MKMapViewDelegate, UIGestureRecognizerDe
                     }
                     //println("ended   doesExist comparison")
                     //println("started remove comparison")
-                    let firstFiveOfPolylineTitle = mkPolyline.title!.substringToIndex(advance(mkPolyline.title!.startIndex,5))
+                    let firstFiveOfPolylineTitle = mkPolyline.title!.substringToIndex(mkPolyline.title!.startIndex.advancedBy(5))
                     if confirmed && firstFiveOfPolylineTitle == "route" ||  test && firstFiveOfPolylineTitle == "testR" || !confirmed && firstFiveOfPolylineTitle == "route" && !doesOverlayExistInRoutes {
                         //println(mkPolyline.title!)
                         //println("removing an overlay")
@@ -274,7 +274,7 @@ class ViewController: UIViewController, MKMapViewDelegate, UIGestureRecognizerDe
         startedMethodNamed("pinchingDidOccur")
         //println("latitude delta: \(self.mapView.region.span.latitudeDelta), longitude delta: \(self.mapView.region.span.longitudeDelta)")
         //println("here")
-        if self.mapView.annotations != nil {
+        if true { // self.mapView.annotations != nil {
             //println("there")
             for annotation in self.mapView.annotations {
                 //println("everywhere")
@@ -318,7 +318,7 @@ class ViewController: UIViewController, MKMapViewDelegate, UIGestureRecognizerDe
         startedMethodNamed("mapView:rendererForOverlay:")
         if overlay.isKindOfClass(MKPolyline) {
             var polylineRenderer = MKPolylineRenderer(overlay: overlay)
-            let overlayFirstFive = overlay.title!.substringToIndex(advance(overlay.title!!.startIndex, 5))
+            let overlayFirstFive = overlay.title!!.substringToIndex(overlay.title!!.startIndex.advancedBy(5))
             if overlayFirstFive == "testR" {
                 polylineRenderer.strokeColor = UIColor.orangeColor().colorWithAlphaComponent(0.5)
                 polylineRenderer.lineWidth = 4
@@ -330,7 +330,7 @@ class ViewController: UIViewController, MKMapViewDelegate, UIGestureRecognizerDe
             else if overlayFirstFive == "river" {
                 polylineRenderer.strokeColor = UIColor.blueColor().colorWithAlphaComponent(0.7)
                 let riverBits = overlay.title!!.componentsSeparatedByString(":")
-                let riverSize = riverBits[1].toInt()!
+                let riverSize = Int(riverBits[1])!
                 polylineRenderer.lineWidth = CGFloat(Double(riverSize)/17+1)
             }
             else {
@@ -350,14 +350,14 @@ class ViewController: UIViewController, MKMapViewDelegate, UIGestureRecognizerDe
             var annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: annotationReuseIdentifier)
             //var annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "node")
             annotationView.canShowCallout = true
-            let node = (annotationas!s NodeAnnotation).node
+            let node = (annotation as! NodeAnnotation).node
             var nodeInWaypoints = false
             for testNode in self.waypoints {
                 if node == testNode {
                     nodeInWaypoints = true
                 }
             }
-            annotationView.image = annotationViewImageForNode((annotation as NodeAnnotation).node, highlighted: nodeInWaypoints)
+            annotationView.image = annotationViewImageForNode((annotation as! NodeAnnotation).node, highlighted: nodeInWaypoints)
             let scale = scaleRightNow()
             annotationView.transform = CGAffineTransformMakeScale(scale, scale)
             
